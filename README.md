@@ -2,7 +2,7 @@
 
 Small program for hex viewer.
 
-`![](https://raw.githubusercontent.com/meirdev/HexViewer/master/Assets/Picture.png)`
+![](https://raw.githubusercontent.com/meirdev/HexViewer/master/Assets/Picture.png)
 
 ### Benchmark
 
