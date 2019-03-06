@@ -35,6 +35,10 @@ int main(int argc, char** argv)
     {
         style = new Hexyl;
     }
+    else if (theme == "hexyl-no-color")
+    {
+        style = new Hexyl(false);
+    }
     else if (theme == "hexdump")
     {
         style = new HexDump;
