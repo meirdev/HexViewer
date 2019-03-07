@@ -1,5 +1,6 @@
 #include <string>
 #include <getopt.h>
+#include <unistd.h> // isatty
 
 #include "Style/Hexyl/Hexyl.h"
 #include "Style/HexDump/HexDump.h"
@@ -33,11 +34,7 @@ int main(int argc, char** argv)
 
     if (theme == "hexyl")
     {
-        style = new Hexyl;
-    }
-    else if (theme == "hexyl-no-color")
-    {
-        style = new Hexyl(false);
+        style = new Hexyl(bool(isatty(STDOUT_FILENO)));
     }
     else if (theme == "hexdump")
     {
