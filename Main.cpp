@@ -1,3 +1,4 @@
+#include <iostream>
 #include <string>
 #include <getopt.h>
 #include <unistd.h> // isatty
@@ -14,7 +15,9 @@ int main(int argc, char** argv)
     int option, length = 0, offset = 0;
     std::string theme;
 
-    while ((option = getopt(argc, argv, "t:l:s:")) != -1)
+    bool help = false;
+
+    while ((option = getopt(argc, argv, "t:l:s:h")) != -1)
     {
         switch (option)
         {
@@ -27,7 +30,16 @@ int main(int argc, char** argv)
             case 's': // offset
                 offset = std::stoi(optarg);
                 break;
+            case 'h': // help
+                help = true;
+                break;
         }
+    }
+
+    if (help)
+    {
+        std::cout << "usage: HexViewer filename [-t theme] [-l length] [-s offset]" << std::endl;
+        return 0;
     }
 
     IStyle* style = nullptr;
