@@ -1,8 +1,8 @@
-#ifndef __HEX_DUMP_H__
-#define __HEX_DUMP_H__
+#ifndef __STYLE_HEXDUMP_H__
+#define __STYLE_HEXDUMP_H__
 
-#include "ABCStyle.h"
-#include "StringBuffer.h"
+#include "Style/ABCStyle.h"
+#include "StringBuffer/StringBuffer.h"
 
 class HexDump : public ABCStyle
 {
@@ -19,4 +19,4 @@ private:
     StringBuffer m_rowBuffer;
 };
 
-#endif // __HEX_DUMP_H__
+#endif // __STYLE_HEXDUMP_H__

@@ -1,7 +1,7 @@
-#ifndef __ABCSTYLE_H__
-#define __ABCSTYLE_H__
+#ifndef __STYLE_ABCSTYLE_H__
+#define __STYLE_ABCSTYLE_H__
 
-#include "IStyle.h"
+#include "Style/IStyle.h"
 
 class ABCStyle : public IStyle
 {
@@ -10,4 +10,4 @@ public:
     std::string getFooter();
 };
 
-#endif // __ABCSTYLE_H__
+#endif // __STYLE_ABCSTYLE_H__

@@ -1,5 +1,5 @@
-#ifndef __IPRINTER_H__
-#define __IPRINTER_H__
+#ifndef __PRINTER_IPRINTER_H__
+#define __PRINTER_IPRINTER_H__
 
 #include <cstddef> // size_t
 
@@ -13,4 +13,4 @@ public:
     virtual void operator<<(unsigned char _byte) = 0;
 };
 
-#endif // __IPRINTER_H__
+#endif // __PRINTER_IPRINTER_H__

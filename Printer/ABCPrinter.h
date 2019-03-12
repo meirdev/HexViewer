@@ -1,10 +1,10 @@
-#ifndef __ABCPRINTER_H__
-#define __ABCPRINTER_H__
+#ifndef __PRINTER_ABCPRINTER_H__
+#define __PRINTER_ABCPRINTER_H__
 
 #include <vector>
 
-#include "IPrinter.h"
-#include "IStyle.h"
+#include "Printer/IPrinter.h"
+#include "Style/IStyle.h"
 
 class ABCPrinter : public IPrinter
 {
@@ -21,4 +21,4 @@ protected:
     IStyle& m_style;
 };
 
-#endif // __ABCPRINTER_H__
+#endif // __PRINTER_ABCPRINTER_H__

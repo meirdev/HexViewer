@@ -1,7 +1,7 @@
 #include <sstream>
 #include <iomanip>
 
-#include "Hexyl.h"
+#include "Style/Hexyl/Hexyl.h"
 
 Hexyl::Hexyl(bool _colourful)
 : m_colourful(_colourful)

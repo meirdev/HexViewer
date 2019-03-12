@@ -4,6 +4,10 @@ Small program for hex viewer.
 
 ![](https://raw.githubusercontent.com/meirdev/HexViewer/master/Assets/Picture.png)
 
+### Usage
+
+`HexViewer filename [-t theme] [-l length] [-s offset] [-h help]`
+
 ### Benchmark
 
 Random file:

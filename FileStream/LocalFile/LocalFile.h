@@ -1,10 +1,10 @@
-#ifndef __LOCAL_FILE_H__
-#define __LOCAL_FILE_H__
+#ifndef __FILE_SYSTEM_LOCAL_FILE_H__
+#define __FILE_SYSTEM_LOCAL_FILE_H__
 
 #include <fstream>
 #include <string>
 
-#include "ABCFile.h"
+#include "FileStream/ABCFile.h"
 
 class LocalFile : public ABCFile
 {
@@ -15,4 +15,4 @@ private:
     std::ifstream m_file;
 };
 
-#endif // __LOCAL_FILE_H__
+#endif // __FILE_SYSTEM_LOCAL_FILE_H__

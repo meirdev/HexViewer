@@ -1,4 +1,4 @@
-#include "LocalFile.h"
+#include "FileStream/LocalFile/LocalFile.h"
 
 LocalFile::LocalFile(IPrinter& _printer, const std::string& _fileName)
 : ABCFile(_printer)

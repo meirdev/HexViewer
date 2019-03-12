@@ -1,4 +1,4 @@
-#include "ABCPrinter.h"
+#include "Printer/ABCPrinter.h"
 
 ABCPrinter::ABCPrinter(IStyle& _style)
 : m_position(0)

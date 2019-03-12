@@ -38,7 +38,7 @@ int main(int argc, char** argv)
 
     if (help)
     {
-        std::cout << "usage: HexViewer filename [-t theme] [-l length] [-s offset]" << std::endl;
+        std::cout << "usage: HexViewer filename [-t theme] [-l length] [-s offset] [-h help]" << std::endl;
         return 0;
     }
 

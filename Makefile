@@ -1,6 +1,6 @@
 CPP = g++
 CXXFLAGS = -ansi -pedantic -Wall -Werror -Wconversion -std=c++0x -O3
-CPPFLAGS = -I$(PWD)/Style -I$(PWD)/FileStream -I$(PWD)/Printer -I$(PWD)/StringBuffer
+CPPFLAGS = -I.
 
 PROGRAM = HexViewer
 

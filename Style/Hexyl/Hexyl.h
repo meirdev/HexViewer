@@ -1,7 +1,7 @@
 #ifndef __STYLE_HEXYL_H__
 #define __STYLE_HEXYL_H__
 
-#include "ABCStyle.h"
+#include "Style/ABCStyle.h"
 
 struct ByteTextStyle
 {

@@ -1,5 +1,5 @@
-#ifndef __ISTYLE_H__
-#define __ISTYLE_H__
+#ifndef __STYLE_ISTYLE_H__
+#define __STYLE_ISTYLE_H__
 
 #include <string>
 #include <vector>
@@ -16,4 +16,4 @@ public:
     virtual size_t getBlockSize() = 0;
 };
 
-#endif // __ISTYLE_H__
+#endif // __STYLE_ISTYLE_H__

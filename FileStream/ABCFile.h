@@ -1,8 +1,8 @@
-#ifndef __ABCFILE_H__
-#define __ABCFILE_H__
+#ifndef __FILE_SYSTEM_ABCFILE_H__
+#define __FILE_SYSTEM_ABCFILE_H__
 
-#include "IFile.h"
-#include "IPrinter.h"
+#include "FileStream/IFile.h"
+#include "Printer/IPrinter.h"
 
 class ABCFile : public IFile
 {
@@ -17,4 +17,4 @@ protected:
     IPrinter& m_printer;
 };
 
-#endif // __ABCFILE_H__
+#endif // __FILE_SYSTEM_ABCFILE_H__

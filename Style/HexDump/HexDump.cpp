@@ -1,7 +1,7 @@
 #include <sstream>
 #include <iomanip>
 
-#include "HexDump.h"
+#include "Style/HexDump/HexDump.h"
 
 HexDump::HexDump()
 : m_rowBuffer(256)

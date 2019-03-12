@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <cstring>
 
-#include "StringBuffer.h"
+#include "StringBuffer/StringBuffer.h"
 
 StringBuffer::StringBuffer(size_t _size)
 : m_position(0)

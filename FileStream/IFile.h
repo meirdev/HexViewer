@@ -1,5 +1,5 @@
-#ifndef __IFILE_H__
-#define __IFILE_H__
+#ifndef __FILE_SYSTEM_IFILE_H__
+#define __FILE_SYSTEM_IFILE_H__
 
 #include <cstddef> // size_t
 
@@ -12,4 +12,4 @@ public:
     virtual void setLength(size_t _length) = 0;
 };
 
-#endif // __IFILE_H__
+#endif // __FILE_SYSTEM_IFILE_H__

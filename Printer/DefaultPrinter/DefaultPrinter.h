@@ -1,8 +1,8 @@
-#ifndef __DEFAULT_PRINTER_H__
-#define __DEFAULT_PRINTER_H__
+#ifndef __PRINTER_DEFAULT_PRINTER_H__
+#define __PRINTER_DEFAULT_PRINTER_H__
 
-#include "ABCPrinter.h"
-#include "StringBuffer.h"
+#include "Printer/ABCPrinter.h"
+#include "StringBuffer/StringBuffer.h"
 
 class DefaultPrinter : public ABCPrinter
 {
@@ -17,4 +17,4 @@ private:
     StringBuffer m_buffer;
 };
 
-#endif // __DEFAULT_PRINTER_H__
+#endif // __PRINTER_DEFAULT_PRINTER_H__
