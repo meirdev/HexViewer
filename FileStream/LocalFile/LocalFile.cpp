@@ -28,6 +28,11 @@ void LocalFile::print()
         {
             m_printer << buffer[i];
         }
+
+        if (totalLength == m_length)
+        {
+            break;
+        }
     }
 
     m_printer.footer();
