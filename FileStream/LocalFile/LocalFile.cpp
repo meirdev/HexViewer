@@ -39,3 +39,16 @@ void LocalFile::print()
 
     delete[] buffer;
 }
+
+size_t LocalFile::getSize()
+{
+    size_t currentPosition = m_file.tellg();
+
+    m_file.seekg(0, std::ios_base::end);
+
+    size_t fileSize = m_file.tellg();
+
+    m_file.seekg(currentPosition, std::ios_base::beg);
+
+    return fileSize;
+}

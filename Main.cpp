@@ -10,12 +10,21 @@
 
 int main(int argc, char** argv)
 {
-    std::string fileName = argv[1];
-
     int option, length = 0, offset = 0;
     std::string theme;
 
     bool help = false;
+
+    std::string fileName;
+
+    if (argc > 1)
+    {
+        fileName = argv[1];
+    }
+    else
+    {
+        help = true;
+    }
 
     while ((option = getopt(argc, argv, "t:l:s:h")) != -1)
     {
