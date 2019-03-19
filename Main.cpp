@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
-#include <getopt.h>
 #include <unistd.h> // isatty
 
+#include "CLI11.hpp"
 #include "Style/Hexyl/Hexyl.h"
 #include "Style/HexDump/HexDump.h"
 #include "Printer/DefaultPrinter/DefaultPrinter.h"
@@ -10,46 +10,21 @@
 
 int main(int argc, char** argv)
 {
-    int option, length = 0, offset = 0;
-    std::string theme;
-
-    bool help = false;
+    CLI::App app("HexViewer");
 
     std::string fileName;
+    app.add_option("filename", fileName, "Filename")->required();
 
-    if (argc > 1)
-    {
-        fileName = argv[1];
-    }
-    else
-    {
-        help = true;
-    }
+    std::string theme;
+    app.add_option("-t", theme, "Theme");
 
-    while ((option = getopt(argc, argv, "t:l:s:h")) != -1)
-    {
-        switch (option)
-        {
-            case 't': // theme
-                theme = optarg;
-                break;
-            case 'l': // length
-                length = std::stoi(optarg);
-                break;
-            case 's': // offset
-                offset = std::stoi(optarg);
-                break;
-            case 'h': // help
-                help = true;
-                break;
-        }
-    }
+    int length = 0;
+    app.add_option("-l", length, "Length");
 
-    if (help)
-    {
-        std::cout << "usage: HexViewer filename [-t theme] [-l length] [-s offset] [-h help]" << std::endl;
-        return 0;
-    }
+    int offset = 0;
+    app.add_option("-s", offset, "Offset");
+
+    CLI11_PARSE(app, argc, argv);
 
     IStyle* style = nullptr;
 
