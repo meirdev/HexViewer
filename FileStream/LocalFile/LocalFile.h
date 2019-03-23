@@ -10,7 +10,7 @@ class LocalFile : public ABCFile
 {
 public:
     LocalFile(IPrinter& _printer, const std::string& _fileName);
-    void print();
+    void read();
     size_t getSize();
 private:
     std::ifstream m_file;

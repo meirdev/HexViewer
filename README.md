@@ -6,7 +6,20 @@ Small program for hex viewer.
 
 ### Usage
 
-`HexViewer filename [-t theme] [-l length] [-s offset] [-h help]`
+```
+HexViewer
+Usage: ./HexViewer [OPTIONS] filename
+
+Positionals:
+  filename TEXT REQUIRED      Filename
+
+Options:
+  -h,--help                   Print this help message and exit
+  -t,--theme TEXT             Theme
+  -s,--offset INT             Offset
+  -l,--length INT             Length
+  -n,--no-colors              No colors
+```
 
 ### Benchmark
 

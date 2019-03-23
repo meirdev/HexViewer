@@ -10,14 +10,12 @@ LocalFile::LocalFile(IPrinter& _printer, const std::string& _fileName)
     }
 }
 
-void LocalFile::print()
+void LocalFile::read()
 {
     char* buffer = new char[4096];
 
     m_file.seekg(m_offset);
-
-    m_printer.header();
-
+    
     size_t totalLength = 0;
 
     while (!m_file.eof())
@@ -34,8 +32,6 @@ void LocalFile::print()
             break;
         }
     }
-
-    m_printer.footer();
 
     delete[] buffer;
 }

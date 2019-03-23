@@ -5,6 +5,7 @@ CPPFLAGS = -I.
 PROGRAM = HexViewer
 
 SOURCES = Main.cpp \
+		 ./HexViewer.cpp \
 		 ./StringBuffer/StringBuffer.cpp \
 		 ./Style/ABCStyle.cpp \
 		 ./Style/HexDump/HexDump.cpp \
