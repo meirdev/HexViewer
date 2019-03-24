@@ -12,7 +12,9 @@ LocalFile::LocalFile(IPrinter& _printer, const std::string& _fileName)
 
 void LocalFile::read()
 {
-    char* buffer = new char[4096];
+    const size_t bufferSize = 4096;
+
+    char* buffer = new char[bufferSize];
 
     m_file.seekg(m_offset);
     
@@ -20,7 +22,7 @@ void LocalFile::read()
 
     while (!m_file.eof())
     {
-        m_file.read(buffer, sizeof(buffer));
+        m_file.read(buffer, bufferSize);
 
         for (size_t i = 0, readBytes = m_file.gcount(); (totalLength < m_length) && (i < readBytes); ++i, ++totalLength)
         {
