@@ -8,7 +8,7 @@ class IFile
 public:
     virtual ~IFile() = default;
     virtual void read() = 0;
-    virtual void setOffset(long _offset) = 0;
+    virtual void setOffset(size_t _offset) = 0;
     virtual void setLength(size_t _length) = 0;
     virtual size_t getSize() = 0;
 };

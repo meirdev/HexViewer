@@ -9,10 +9,10 @@ class ABCFile : public IFile
 protected:
     ABCFile(IPrinter& _printer);
 public:
-    void setOffset(long _offset);
+    void setOffset(size_t _offset);
     void setLength(size_t _length);
 protected:
-    long      m_offset;
+    size_t    m_offset;
     size_t    m_length;
     IPrinter& m_printer;
 };

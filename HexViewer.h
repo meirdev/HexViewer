@@ -14,7 +14,7 @@ public:
     ~HexViewer();
     void setStyle(std::string _style, bool _colors = true);
     void setPrinter(std::string _printer);
-    void setFile(std::string _file, std::string _fileName, size_t _offset = 0, size_t _length = 0);
+    void setFile(std::string _file, std::string _fileName, int _offset = 0, int _length = 0);
     void print();
 private:
     IStyle*   m_style;

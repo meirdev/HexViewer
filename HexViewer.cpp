@@ -39,12 +39,22 @@ void HexViewer::setPrinter(std::string _printer)
     m_printer = new DefaultPrinter(*m_style);
 }
 
-void HexViewer::setFile(std::string _file, std::string _fileName, size_t _offset, size_t _length)
+void HexViewer::setFile(std::string _file, std::string _fileName, int _offset, int _length)
 {
     m_file = new LocalFile(*m_printer, _fileName);
 
     if (_offset)
     {
+        if (_offset < 0)
+        {
+            _offset = static_cast<int>(m_file->getSize())+_offset;
+
+            if (_offset < 0)
+            {
+                _offset = 0;
+            }
+        }
+
         m_file->setOffset(static_cast<size_t>(_offset));
     }
 

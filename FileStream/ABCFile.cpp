@@ -9,22 +9,10 @@ ABCFile::ABCFile(IPrinter& _printer)
 {
 }
 
-void ABCFile::setOffset(long _offset)
+void ABCFile::setOffset(size_t _offset)
 {
-    if (_offset < 0)
-    {
-        m_offset = getSize()+_offset;
-
-        if (m_offset < 0)
-        {
-            m_offset = 0;
-        }
-    }
-    else
-    {
-        m_offset = _offset;
-    }
-
+    m_offset = _offset;
+    
     m_printer.setPosition(m_offset);
 }
 
