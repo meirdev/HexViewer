@@ -1,5 +1,7 @@
 ## HexViewer
 
+![](https://raw.githubusercontent.com/meirdev/HexViewer/master/Assets/Logo.png)
+
 Small program for hex viewer.
 
 ![](https://raw.githubusercontent.com/meirdev/HexViewer/master/Assets/Picture.png)
