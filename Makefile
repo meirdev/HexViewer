@@ -7,13 +7,13 @@ PROGRAM = HexViewer
 SOURCES = Main.cpp \
 		 ./HexViewer.cpp \
 		 ./StringBuffer/StringBuffer.cpp \
-		 ./Style/ABCStyle.cpp \
+		 ./Style/IStyle.cpp \
 		 ./Style/HexDump/HexDump.cpp \
 		 ./Style/Hexyl/Hexyl.cpp \
-		 ./FileStream/ABCFile.cpp \
 		 ./FileStream/LocalFile/LocalFile.cpp \
-		 ./Printer/ABCPrinter.cpp \
-		 ./Printer/DefaultPrinter/DefaultPrinter.cpp
+		 ./Printer/IPrinter.cpp \
+		 ./Printer/DefaultPrinter/DefaultPrinter.cpp \
+		 ./DataProcessing/DataProcessing.cpp
 
 OBJECTS = $(SOURCES:.cpp=.o)
 

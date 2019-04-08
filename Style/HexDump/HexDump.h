@@ -1,21 +1,21 @@
 #ifndef __STYLE_HEXDUMP_H__
 #define __STYLE_HEXDUMP_H__
 
-#include "Style/ABCStyle.h"
+#include "Style/IStyle.h"
 #include "StringBuffer/StringBuffer.h"
 
-class HexDump : public ABCStyle
+class HexDump : public IStyle
 {
 public:
     HexDump();
-    std::string getPosition(size_t _position);
-    std::string getRow(const std::string& _position, const std::vector<unsigned short>& _bytes);
-    size_t getBlockSize();
+    std::string position(size_t _position);
+    std::string row(const std::string& _position, const std::vector<unsigned short>& _bytes);
+    size_t blockSize();
 private:
     const std::string& getText(unsigned short _byte);
     const std::string& getByte(unsigned short _byte);
 private:
-    std::vector<std::pair<std::string, std::string> > m_byteTextStyle;
+    std::vector<std::pair<std::string, std::string>> m_byteTextStyle;
     StringBuffer m_rowBuffer;
 };
 

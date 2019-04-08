@@ -58,7 +58,7 @@ inline const std::string& Hexyl::getText(unsigned short _byte)
     return m_byteTextStyle[_byte].m_text;
 }
 
-inline std::string Hexyl::getPosition(size_t _position)
+inline std::string Hexyl::position(size_t _position)
 {
     std::stringstream position;
 
@@ -86,7 +86,7 @@ static std::string Repeat(const std::string& _string, size_t _length)
     return fs.str();
 }
 
-inline std::string Hexyl::getHeader()
+inline std::string Hexyl::header()
 {
     std::stringstream header;
 
@@ -98,7 +98,7 @@ inline std::string Hexyl::getHeader()
     return header.str();
 }
 
-inline std::string Hexyl::getFooter()
+inline std::string Hexyl::footer()
 {
     std::stringstream footer;
 
@@ -110,7 +110,7 @@ inline std::string Hexyl::getFooter()
     return footer.str();
 }
 
-std::string Hexyl::getRow(const std::string& _position, const std::vector<unsigned short>& _bytes)
+std::string Hexyl::row(const std::string& _position, const std::vector<unsigned short>& _bytes)
 {
     std::stringstream row;
 
@@ -150,7 +150,7 @@ std::string Hexyl::getRow(const std::string& _position, const std::vector<unsign
     return row.str();
 }
 
-inline size_t Hexyl::getBlockSize()
+inline size_t Hexyl::blockSize()
 {
     return 16;
 }

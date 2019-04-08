@@ -1,7 +1,7 @@
 #ifndef __STYLE_HEXYL_H__
 #define __STYLE_HEXYL_H__
 
-#include "Style/ABCStyle.h"
+#include "Style/IStyle.h"
 
 struct ByteTextStyle
 {
@@ -10,15 +10,15 @@ struct ByteTextStyle
     std::string m_text;
 };
 
-class Hexyl : public ABCStyle
+class Hexyl : public IStyle
 {
 public:
     Hexyl(bool _colourful = true);
-    std::string getPosition(size_t _position);
-    std::string getHeader();
-    std::string getRow(const std::string& _position, const std::vector<unsigned short>& _dbytes);
-    std::string getFooter();
-    size_t getBlockSize();
+    std::string position(size_t _position);
+    std::string header();
+    std::string footer();
+    std::string row(const std::string& _position, const std::vector<unsigned short>& _dbytes);
+    size_t blockSize();
 private:
     const std::string& getText(unsigned short _byte);
     const std::string& getByte(unsigned short _byte);

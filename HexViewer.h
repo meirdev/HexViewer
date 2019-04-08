@@ -12,10 +12,10 @@ class HexViewer
 public:
     HexViewer();
     ~HexViewer();
-    void setStyle(std::string _style, bool _colors = true);
-    void setPrinter(std::string _printer);
-    void setFile(std::string _file, std::string _fileName, int _offset = 0, int _length = 0);
-    void print();
+    void setStyle(const std::string& _style, bool _colors = true);
+    void setPrinter(const std::string& _printer);
+    void setFile(const std::string& _file);
+    void print(int _offset = 0, size_t _length = 0);
 private:
     IStyle*   m_style;
     IPrinter* m_printer;

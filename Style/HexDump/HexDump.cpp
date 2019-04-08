@@ -37,7 +37,7 @@ inline const std::string& HexDump::getText(unsigned short _byte)
     return m_byteTextStyle[_byte].second;
 }
 
-inline std::string HexDump::getPosition(size_t _position)
+inline std::string HexDump::position(size_t _position)
 {
     std::stringstream position;
 
@@ -46,7 +46,7 @@ inline std::string HexDump::getPosition(size_t _position)
     return position.str();
 }
 
-std::string HexDump::getRow(const std::string& _position, const std::vector<unsigned short>& _bytes)
+std::string HexDump::row(const std::string& _position, const std::vector<unsigned short>& _bytes)
 {
     m_rowBuffer.clear();
 
@@ -81,7 +81,7 @@ std::string HexDump::getRow(const std::string& _position, const std::vector<unsi
     return m_rowBuffer.get();
 }
 
-inline size_t HexDump::getBlockSize()
+inline size_t HexDump::blockSize()
 {
     return 16;
 }

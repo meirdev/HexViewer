@@ -7,10 +7,11 @@ class IFile
 {
 public:
     virtual ~IFile() = default;
-    virtual void read() = 0;
-    virtual void setOffset(size_t _offset) = 0;
-    virtual void setLength(size_t _length) = 0;
-    virtual size_t getSize() = 0;
+    virtual size_t read(char* _buffer, size_t _count) = 0;
+    virtual void seek(size_t _position) = 0;
+    virtual size_t tell() = 0;
+    virtual bool eof() = 0;
+    virtual size_t size() = 0;
 };
 
 #endif // __FILE_SYSTEM_IFILE_H__

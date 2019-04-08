@@ -3,6 +3,7 @@
 #include "Style/HexDump/HexDump.h"
 #include "Printer/DefaultPrinter/DefaultPrinter.h"
 #include "FileStream/LocalFile/LocalFile.h"
+#include "DataProcessing/DataProcessing.h"
 
 HexViewer::HexViewer()
 : m_style(nullptr)
@@ -18,7 +19,7 @@ HexViewer::~HexViewer()
     delete m_file;
 }
 
-void HexViewer::setStyle(std::string _style, bool _colors)
+void HexViewer::setStyle(const std::string& _style, bool _colors)
 {
     if (_style == "hexyl")
     {
@@ -34,41 +35,29 @@ void HexViewer::setStyle(std::string _style, bool _colors)
     }
 }
 
-void HexViewer::setPrinter(std::string _printer)
+void HexViewer::setPrinter(const std::string& _printer)
 {
-    m_printer = new DefaultPrinter(*m_style);
+    m_printer = new DefaultPrinter;
 }
 
-void HexViewer::setFile(std::string _file, std::string _fileName, int _offset, int _length)
+void HexViewer::setFile(const std::string& _file)
 {
-    m_file = new LocalFile(*m_printer, _fileName);
+    m_file = new LocalFile(_file);
+}
+
+void HexViewer::print(int _offset, size_t _length)
+{
+    DataProcessing dataProcessing(*m_printer, *m_style, *m_file);
 
     if (_offset)
     {
-        if (_offset < 0)
-        {
-            _offset = static_cast<int>(m_file->getSize())+_offset;
-
-            if (_offset < 0)
-            {
-                _offset = 0;
-            }
-        }
-
-        m_file->setOffset(static_cast<size_t>(_offset));
+        dataProcessing.setOffset(_offset);
     }
 
     if (_length)
     {
-        m_file->setLength(static_cast<size_t>(_length));
+        dataProcessing.setLength(_length);
     }
-}
 
-void HexViewer::print()
-{
-    m_printer->header();
-
-    m_file->read();
-
-    m_printer->footer();
+    dataProcessing.process();
 }

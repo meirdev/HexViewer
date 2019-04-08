@@ -1,7 +1,5 @@
 #include <string>
 
-// No support in windows: #include <unistd.h> // isatty(STDOUT_FILENO)
-
 #include "HexViewer.h"
 #include "CLI11.hpp"
 
@@ -18,7 +16,7 @@ int main(int argc, char** argv)
     int offset = 0;
     app.add_option("-s,--offset", offset, "Offset");
 
-    int length = 0;
+    size_t length = 0;
     app.add_option("-l,--length", length, "Length");
 
     bool noColor = false;
@@ -30,9 +28,9 @@ int main(int argc, char** argv)
 
     hexViewer.setStyle(theme, !noColor);
     hexViewer.setPrinter("default");
-    hexViewer.setFile("local", fileName, offset, length);
+    hexViewer.setFile(fileName);
 
-    hexViewer.print();
+    hexViewer.print(offset, length);
 
     return 0;
 }
